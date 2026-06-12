@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Size Up — Des leads qualifiés qui signent. Pas des vues qui repartent.</title>
+<meta name="description" content="Size Up, agence de growth marketing B2B à Rennes. Acquisition + conversion : des leads qualifiés qui signent, des chiffres attribués, un partenariat. Interventions France entière." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Size Up — Des leads qualifiés qui signent." />
+<meta property="og:description" content="Agence de growth marketing B2B. Acquisition + conversion mesurable. 40+ clients, 3.2 M€ générés. Rennes · France entière." />
+<meta property="og:image" content="https://size-up.io/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://size-up.io" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Size Up — Des leads qualifiés qui signent." />
+<meta name="twitter:description" content="Agence de growth marketing B2B. Acquisition + conversion mesurable. Rennes · France entière." />
+<meta name="twitter:image" content="https://size-up.io/og-image.png" />
+
+<!-- Favicon + Apple Touch (branded SVG) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a0a0b'/%3E%3Cpath d='M30 68 L30 50 M50 68 L50 38 M70 68 L70 26' stroke='%238b5cf6' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%230a0a0b'/%3E%3Cpath d='M30 68 L30 50 M50 68 L50 38 M70 68 L70 26' stroke='%238b5cf6' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Size Up",
+  "description": "Agence de growth marketing B2B : acquisition et conversion mesurable pour PME.",
+  "url": "https://size-up.io",
+  "email": "hello@size-up.io",
+  "telephone": "+33766475091",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rennes",
+    "addressCountry": "FR"
+  },
+  "areaServed": "FR",
+  "priceRange": "€€€",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "40"
+  }
+}
+</script>
+
+<style>
+:root{
+  --bg:#0a0a0b;
+  --bg-soft:#0e0e10;
+  --surface:rgba(255,255,255,0.025);
+  --surface-2:rgba(255,255,255,0.04);
+  --border:rgba(255,255,255,0.08);
+  --border-strong:rgba(255,255,255,0.14);
+  --text:#f4f4f6;
+  --text-soft:#a6a6b0;
+  --text-dim:#6f6f7a;
+  --indigo:#6366f1;
+  --violet:#8b5cf6;
+  --grad:linear-gradient(110deg,#6366f1,#8b5cf6 55%,#a78bfa);
+  --green:#34d399;
+  --amber:#fbbf24;
+  --font-display:'Outfit',sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,monospace;
+  --font-serif:'Instrument Serif',Georgia,serif;
+  --radius:18px;
+  --radius-sm:12px;
+  --maxw:1180px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  background:
+    radial-gradient(900px 500px at 75% -5%, rgba(139,92,246,.16), transparent 60%),
+    radial-gradient(700px 500px at 10% 8%, rgba(99,102,241,.12), transparent 55%);
+  pointer-events:none;z-index:0;
+}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em;line-height:1.08;font-weight:700}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+section{position:relative;z-index:1}
+.eyebrow{
+  font-family:var(--font-mono);font-weight:500;font-size:12px;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--violet);margin-bottom:14px;
+}
+.grad-text{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  background-size:200% 100%;
+}
+.grad-anim{animation:hue 6s ease-in-out infinite}
+.hero-accent{font-family:var(--font-serif);font-style:italic;font-weight:400;letter-spacing:0}
+.badge-sec{font-family:var(--font-mono)!important;letter-spacing:.02em}
+@keyframes hue{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* ===== Buttons ===== */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:15px;letter-spacing:.01em;
+  padding:14px 26px;border-radius:999px;border:1px solid transparent;cursor:pointer;
+  min-height:48px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s;
+  white-space:nowrap;
+}
+.btn-primary{
+  background:var(--grad);background-size:160% 100%;color:#fff;
+  box-shadow:0 8px 30px rgba(124,92,246,.35), inset 0 1px 0 rgba(255,255,255,.18);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(124,92,246,.5), inset 0 1px 0 rgba(255,255,255,.25);background-position:100% 0}
+.btn-ghost{
+  background:var(--surface-2);color:var(--text);border:1px solid var(--border-strong);
+  backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{transform:translateY(-2px);border-color:rgba(139,92,246,.5);background:rgba(255,255,255,.06)}
+.btn-lg{padding:17px 34px;font-size:16px;min-height:56px}
+
+/* ===== Nav ===== */
+header.nav{
+  position:sticky;top:0;z-index:50;
+  border-bottom:1px solid transparent;transition:border-color .3s,background .3s,backdrop-filter .3s;
+}
+header.nav.scrolled{
+  background:rgba(10,10,11,.72);backdrop-filter:blur(16px) saturate(140%);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px;font-family:'Outfit';font-weight:700;font-size:20px;letter-spacing:-.02em}
+.logo .mark{
+  width:34px;height:34px;border-radius:10px;background:var(--bg-soft);
+  border:1px solid var(--border-strong);display:grid;place-items:center;flex:none;
+}
+.logo .mark svg{width:20px;height:20px}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:14.5px;color:var(--text-soft);font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.hamburger{display:none;background:none;border:1px solid var(--border-strong);border-radius:10px;width:46px;height:46px;cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+.hamburger span{width:20px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;inset:72px 0 auto 0;z-index:49;background:rgba(10,10,11,.97);backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--border);padding:18px 24px 28px;display:none;flex-direction:column;gap:6px;
+}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:14px 8px;font-size:17px;color:var(--text-soft);border-bottom:1px solid var(--border);font-weight:500}
+.mobile-menu .btn{margin-top:14px}
+
+/* ===== Hero ===== */
+.hero{padding:72px 0 90px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border-radius:999px;
+  background:var(--surface-2);border:1px solid var(--border);font-size:12px;color:var(--text-soft);
+  font-family:var(--font-mono);font-weight:500;letter-spacing:.04em;margin-bottom:26px;backdrop-filter:blur(8px);
+}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green)}
+.hero h1{font-size:clamp(38px,5.2vw,62px);font-weight:800;margin-bottom:8px}
+.badge-sec{
+  display:inline-flex;align-items:center;gap:8px;margin:18px 0 10px;padding:6px 13px;border-radius:8px;
+  background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.25);color:#c4b5fd;font-size:12.5px;font-weight:600;letter-spacing:.02em;
+}
+.hero .lead{font-size:18.5px;color:var(--text-soft);max-width:520px;margin:18px 0 32px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;align-items:center;gap:22px;margin-top:30px;flex-wrap:wrap;color:var(--text-soft);font-size:14px}
+.stars{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--text)}
+.stars .s{color:var(--amber);letter-spacing:2px}
+.hero-meta .pin{display:flex;align-items:center;gap:7px}
+
+/* ===== Dashboard visual ===== */
+.dash{
+  background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
+  border:1px solid var(--border-strong);border-radius:24px;padding:22px;position:relative;
+  box-shadow:0 30px 80px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter:blur(12px);
+}
+.dash::before{
+  content:"";position:absolute;inset:-1px;border-radius:24px;padding:1px;
+  background:linear-gradient(160deg,rgba(139,92,246,.5),transparent 40%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;
+}
+.dash-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.dash-head .title{display:flex;align-items:center;gap:9px;font-family:var(--font-mono);font-size:12px;color:var(--text-soft);font-weight:500;letter-spacing:.02em}
+.dash-head .live{display:flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:10.5px;color:var(--green);font-weight:600;background:rgba(52,211,153,.1);padding:4px 9px;border-radius:6px;letter-spacing:.08em}
+.dash-head .live .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.dash-kpi{margin-bottom:6px}
+.dash-kpi .label{font-family:var(--font-mono);font-size:11.5px;color:var(--text-dim);font-weight:500;letter-spacing:.03em}
+.dash-kpi .val{font-family:'Outfit';font-size:42px;font-weight:800;line-height:1;display:flex;align-items:baseline;gap:10px}
+.dash-kpi .val .up{font-size:14px;color:var(--green);font-weight:700;font-family:'Inter'}
+.chart{height:120px;display:flex;align-items:flex-end;gap:9px;margin:20px 0 8px}
+.chart .bar{flex:1;border-radius:6px 6px 3px 3px;background:linear-gradient(180deg,var(--violet),rgba(99,102,241,.35));position:relative;transform-origin:bottom;animation:grow 1s var(--ease) backwards}
+@keyframes grow{from{transform:scaleY(0)}}
+.chart .bar.peak{background:linear-gradient(180deg,#a78bfa,var(--indigo))}
+.dash-foot{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:10.5px;color:var(--text-dim);border-top:1px solid var(--border);padding-top:12px;margin-top:4px;letter-spacing:.04em}
+.dash-mini{
+  position:absolute;right:-18px;bottom:38px;background:rgba(14,14,16,.92);border:1px solid var(--border-strong);
+  border-radius:14px;padding:13px 16px;backdrop-filter:blur(12px);box-shadow:0 16px 40px rgba(0,0,0,.5);
+}
+.dash-mini .label{font-family:var(--font-mono);font-size:10.5px;color:var(--text-dim);letter-spacing:.03em}
+.dash-mini .v{font-family:'Outfit';font-size:22px;font-weight:700;color:var(--green)}
+.stack-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.chip{font-family:var(--font-mono);font-size:12px;color:var(--text-soft);background:var(--surface-2);border:1px solid var(--border);padding:7px 13px;border-radius:999px;font-weight:500;letter-spacing:.02em}
+
+/* ===== Sections common ===== */
+.sec{padding:92px 0}
+.sec-head{max-width:680px;margin:0 auto 56px;text-align:center}
+.sec-head h2{font-size:clamp(30px,4vw,44px);font-weight:800;margin-bottom:16px}
+.sec-head p{color:var(--text-soft);font-size:17px}
+.sec-cta{display:flex;justify-content:center;margin-top:48px}
+
+/* ===== Fit ===== */
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.fit-card{border-radius:var(--radius);padding:34px;background:var(--surface);border:1px solid var(--border);backdrop-filter:blur(8px)}
+.fit-card.yes{border-top:3px solid var(--green)}
+.fit-card.no{border-top:3px solid var(--amber)}
+.fit-card h3{font-size:21px;margin-bottom:22px;display:flex;align-items:center;gap:11px}
+.fit-card h3 .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-size:16px;flex:none}
+.fit-card.yes h3 .ic{background:rgba(52,211,153,.14);color:var(--green)}
+.fit-card.no h3 .ic{background:rgba(251,191,36,.14);color:var(--amber)}
+.fit-list{list-style:none;display:flex;flex-direction:column;gap:15px}
+.fit-list li{display:flex;gap:12px;font-size:15.5px;color:var(--text-soft);line-height:1.5}
+.fit-list li .b{flex:none;margin-top:3px;font-weight:700}
+.fit-card.yes .fit-list li .b{color:var(--green)}
+.fit-card.no .fit-list li .b{color:var(--amber)}
+
+/* ===== Stats ===== */
+.stats{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-soft)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:60px 0}
+.stat{text-align:center}
+.stat .num{font-family:'Outfit';font-size:clamp(38px,5vw,56px);font-weight:800;line-height:1}
+.stat .lbl{font-family:var(--font-mono);color:var(--text-soft);font-size:12.5px;margin-top:12px;letter-spacing:.02em;line-height:1.4}
+
+/* ===== Méthode ===== */
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.m-card{
+  border-radius:var(--radius);padding:30px 26px;background:var(--surface);border:1px solid var(--border);
+  position:relative;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;backdrop-filter:blur(8px);overflow:hidden;
+}
+.m-card:hover{transform:translateY(-4px);border-color:rgba(139,92,246,.4);box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.m-card .step{font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--violet);letter-spacing:.14em}
+.m-card .m-ic{width:48px;height:48px;border-radius:13px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.22);display:grid;place-items:center;margin:18px 0 18px;color:#c4b5fd}
+.m-card h3{font-size:20px;margin-bottom:10px}
+.m-card p{color:var(--text-soft);font-size:14.5px;line-height:1.55}
+
+/* ===== Témoignages ===== */
+.tg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tg-card{
+  border-radius:var(--radius);padding:32px 28px 28px;background:var(--surface);border:1px solid var(--border);
+  position:relative;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;backdrop-filter:blur(8px);
+  display:flex;flex-direction:column;
+}
+.tg-card:hover{transform:translateY(-4px);border-color:rgba(139,92,246,.4);box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.tg-card .quote{font-family:var(--font-serif);font-style:italic;font-size:84px;line-height:.6;color:rgba(139,92,246,.4);height:34px}
+.tg-result{display:inline-flex;align-self:flex-start;align-items:center;gap:7px;font-family:var(--font-mono);font-size:11.5px;font-weight:600;color:var(--green);background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.2);padding:5px 11px;border-radius:8px;margin-bottom:16px;letter-spacing:.02em}
+.tg-card blockquote{font-family:var(--font-serif);font-size:23px;line-height:1.32;color:var(--text);margin-bottom:22px;flex:1;letter-spacing:.005em}
+.tg-meta{border-top:1px solid var(--border);padding-top:16px}
+.tg-meta .name{font-weight:700;font-size:15px;font-family:var(--font-display)}
+.tg-meta .role{font-size:13px;color:var(--text-soft);margin-top:3px}
+.tg-meta .ctx{font-family:var(--font-mono);font-size:11px;color:var(--text-dim);margin-top:8px;display:flex;gap:8px;flex-wrap:wrap;letter-spacing:.02em}
+.tg-meta .ctx span{background:var(--surface-2);border:1px solid var(--border);padding:3px 8px;border-radius:6px}
+
+/* ===== Expertises ===== */
+.exp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.exp-card{
+  border-radius:var(--radius);padding:34px;background:var(--surface);border:1px solid var(--border);
+  display:flex;gap:22px;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;backdrop-filter:blur(8px);
+}
+.exp-card:hover{transform:translateY(-4px);border-color:rgba(139,92,246,.4);box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.exp-ic{width:54px;height:54px;border-radius:14px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.22);display:grid;place-items:center;flex:none;color:#c4b5fd}
+.exp-card h3{font-size:20px;margin-bottom:9px}
+.exp-card p{color:var(--text-soft);font-size:14.5px;line-height:1.55;margin-bottom:14px}
+.exp-tags{display:flex;flex-wrap:wrap;gap:7px}
+.exp-tags span{font-size:12px;color:var(--text-soft);background:var(--surface-2);border:1px solid var(--border);padding:4px 10px;border-radius:999px}
+
+/* ===== CTA milieu ===== */
+.cta-mid{padding:40px 0 100px}
+.cta-box{
+  position:relative;border-radius:28px;padding:72px 40px;text-align:center;overflow:hidden;
+  background:linear-gradient(160deg,rgba(99,102,241,.12),rgba(139,92,246,.06));
+  border:1px solid rgba(139,92,246,.25);
+}
+.cta-box .halo{
+  position:absolute;width:700px;height:700px;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%);
+  background:radial-gradient(circle,rgba(139,92,246,.3),transparent 60%);
+  animation:halo 7s ease-in-out infinite;pointer-events:none;
+}
+@keyframes halo{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.7}50%{transform:translate(-50%,-50%) scale(1.25);opacity:1}}
+.cta-box h2{font-size:clamp(30px,4.4vw,46px);font-weight:800;margin-bottom:16px;position:relative}
+.cta-box p{color:var(--text-soft);font-size:18px;max-width:520px;margin:0 auto 32px;position:relative}
+.cta-box .btn{position:relative}
+.cta-box .micro{margin-top:18px;font-size:13.5px;color:var(--text-dim);position:relative}
+
+/* ===== Formations ===== */
+.form-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.form-card{
+  border-radius:var(--radius);padding:30px;background:var(--surface);border:1px solid var(--border);
+  transition:transform .35s var(--ease),border-color .35s,box-shadow .35s;backdrop-filter:blur(8px);
+}
+.form-card:hover{transform:translateY(-4px);border-color:rgba(139,92,246,.4);box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.form-card .tag{font-family:var(--font-mono);font-size:11px;color:var(--violet);font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.form-card h3{font-size:19px;margin:14px 0 10px}
+.form-card p{color:var(--text-soft);font-size:14.5px;line-height:1.55}
+
+/* ===== Footer ===== */
+footer{border-top:1px solid var(--border);background:var(--bg-soft);padding:64px 0 36px;position:relative;z-index:1}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.foot-brand .logo{margin-bottom:16px}
+.foot-brand p{color:var(--text-soft);font-size:14.5px;max-width:280px}
+.foot-col h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);margin-bottom:18px;font-weight:500}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.foot-col a{color:var(--text-soft);font-size:14.5px;transition:color .2s}
+.foot-col a:hover{color:var(--text)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:28px;flex-wrap:wrap;gap:16px}
+.foot-bottom .notice{font-size:13.5px;color:var(--text-dim)}
+.foot-bottom .copy{font-size:13.5px;color:var(--text-dim)}
+
+/* ===== Modal ===== */
+.modal-backdrop{
+  position:fixed;inset:0;z-index:100;background:rgba(5,5,7,.7);backdrop-filter:blur(8px);
+  display:none;align-items:center;justify-content:center;padding:24px;overflow-y:auto;
+}
+.modal-backdrop.open{display:flex}
+.modal{
+  background:linear-gradient(160deg,#141416,#0d0d0f);border:1px solid var(--border-strong);
+  border-radius:24px;padding:40px 36px;max-width:460px;width:100%;position:relative;
+  box-shadow:0 40px 100px rgba(0,0,0,.7);animation:pop .35s var(--ease);
+  margin:auto;
+}
+@keyframes pop{from{opacity:0;transform:translateY(20px) scale(.97)}}
+.modal .close{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:10px;background:var(--surface-2);border:1px solid var(--border);color:var(--text-soft);font-size:18px;cursor:pointer;display:grid;place-items:center;transition:.2s}
+.modal .close:hover{background:rgba(255,255,255,.08);color:var(--text)}
+.modal h3{font-size:25px;font-weight:800;margin-bottom:8px;padding-right:30px}
+.modal .sub{color:var(--text-soft);font-size:14.5px;margin-bottom:26px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--text-soft);margin-bottom:7px}
+.field input{
+  width:100%;padding:13px 15px;border-radius:12px;background:var(--bg);border:1px solid var(--border-strong);
+  color:var(--text);font-size:15px;font-family:'Inter';transition:border-color .2s,box-shadow .2s;min-height:48px;
+}
+.field input:focus{outline:none;border-color:var(--violet);box-shadow:0 0 0 3px rgba(139,92,246,.18)}
+.field input::placeholder{color:var(--text-dim)}
+.modal .btn{width:100%;margin-top:8px}
+.rgpd{font-size:11.5px;color:var(--text-dim);margin-top:16px;line-height:1.5;display:flex;gap:8px}
+.rgpd svg{flex:none;margin-top:1px}
+.modal-success{text-align:center;padding:20px 0}
+.modal-success .ok{width:64px;height:64px;border-radius:50%;background:rgba(52,211,153,.14);border:1px solid rgba(52,211,153,.3);display:grid;place-items:center;margin:0 auto 20px;color:var(--green)}
+.modal-success h3{margin-bottom:10px}
+.modal-success p{color:var(--text-soft);font-size:15px}
+
+/* ===== Sticky mobile CTA ===== */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;padding:14px 18px calc(14px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,rgba(10,10,11,0),rgba(10,10,11,.95) 35%);
+  display:none;
+}
+.sticky-cta .btn{width:100%;box-shadow:0 10px 30px rgba(124,92,246,.5)}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .dash-mini{right:0}
+  .nav-links{display:none}
+  .nav-cta .btn{display:none}
+  .hamburger{display:flex}
+  .method-grid{grid-template-columns:repeat(2,1fr)}
+  .tg-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:40px 24px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .sticky-cta{display:block}
+  body{padding-bottom:80px}
+}
+@media(max-width:600px){
+  .fit-grid,.exp-grid,.form-grid{grid-template-columns:1fr}
+  .method-grid{grid-template-columns:1fr}
+  .hero{padding:48px 0 60px}
+  .sec{padding:64px 0}
+  .cta-box{padding:52px 24px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="logo" aria-label="Size Up — accueil">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none"><path d="M30 70 L30 52 M50 70 L50 40 M70 70 L70 28" stroke="#8b5cf6" stroke-width="9" stroke-linecap="round"/></svg>
+      </span>
+      Size&nbsp;Up
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#fit">C'est pour vous</a>
+      <a href="#methode">Méthode</a>
+      <a href="#preuves">Résultats</a>
+      <a href="#expertises">Expertises</a>
+      <a href="#formations">Formations</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="btn btn-primary" data-modal>Prendre RDV</button>
+      <button class="hamburger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#fit">C'est pour vous</a>
+  <a href="#methode">Méthode</a>
+  <a href="#preuves">Résultats</a>
+  <a href="#expertises">Expertises</a>
+  <a href="#formations">Formations</a>
+  <button class="btn btn-primary" data-modal>Prendre RDV</button>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="badge"><span class="dot" aria-hidden="true"></span>Croissance B2B · Acquisition &amp; Conversion</span>
+      <h1>Des leads qualifiés <span class="grad-text grad-anim hero-accent">qui signent.</span><br />Pas des vues qui repartent.</h1>
+      <span class="badge-sec">Sites qui convertissent + visibilité IA</span>
+      <p class="lead">Agence de growth marketing B2B pour PME de 20 à 100 personnes. On transforme votre visibilité en pipeline commercial — avec des chiffres attribués, pas des promesses.</p>
+      <div class="hero-cta">
+        <a href="#preuves" class="btn btn-ghost btn-lg">Découvrir la méthode</a>
+        <button class="btn btn-primary btn-lg" data-modal>Prendre RDV</button>
+      </div>
+      <div class="hero-meta">
+        <span class="stars"><span class="s" aria-hidden="true">★★★★★</span> 5.0 · 40 clients</span>
+        <span class="pin" aria-hidden="true">📍 Rennes · France entière</span>
+      </div>
+    </div>
+
+    <!-- Dashboard visual (built, not placeholder) -->
+    <div class="dash reveal" role="img" aria-label="Tableau de bord client montrant +124% de leads qualifiés générés sur 90 jours">
+      <div class="dash-head">
+        <span class="title"><span class="mark" aria-hidden="true" style="width:22px;height:22px;border-radius:6px"><svg viewBox="0 0 100 100" fill="none" style="width:13px"><path d="M30 70 L30 52 M50 70 L50 40 M70 70 L70 28" stroke="#8b5cf6" stroke-width="11" stroke-linecap="round"/></svg></span> Pipeline · Q2</span>
+        <span class="live"><span class="dot" aria-hidden="true"></span>LIVE</span>
+      </div>
+      <div class="dash-kpi">
+        <div class="label">Leads qualifiés · 90 jours</div>
+        <div class="val">+124% <span class="up">▲ vs trimestre N-1</span></div>
+      </div>
+      <div class="chart" aria-hidden="true">
+        <span class="bar" style="height:34%;animation-delay:.05s"></span>
+        <span class="bar" style="height:42%;animation-delay:.1s"></span>
+        <span class="bar" style="height:38%;animation-delay:.15s"></span>
+        <span class="bar" style="height:56%;animation-delay:.2s"></span>
+        <span class="bar" style="height:61%;animation-delay:.25s"></span>
+        <span class="bar" style="height:74%;animation-delay:.3s"></span>
+        <span class="bar peak" style="height:88%;animation-delay:.35s"></span>
+        <span class="bar peak" style="height:100%;animation-delay:.4s"></span>
+      </div>
+      <div class="dash-foot"><span>Janv.</span><span>Févr.</span><span>Mars</span></div>
+      <div class="dash-mini" aria-hidden="true">
+        <div class="label">Coût par lead</div>
+        <div class="v">−38%</div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="stack-row reveal" aria-label="Stack opérationnelle">
+      <span class="chip">CRM</span>
+      <span class="chip">Automatisation</span>
+      <span class="chip">Data</span>
+      <span class="chip">Cold Mailing</span>
+      <span class="chip">Enrichissement</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIT ===== -->
+<section class="sec" id="fit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">C'est pour vous ?</p>
+      <h2>On ne travaille pas avec tout le monde.</h2>
+      <p>Parce qu'un bon partenariat, c'est d'abord le bon match. Voici comment savoir en 30 secondes.</p>
+    </div>
+    <div class="fit-grid">
+      <div class="fit-card yes reveal">
+        <h3><span class="ic" aria-hidden="true">✓</span>C'est pour vous si…</h3>
+        <ul class="fit-list">
+          <li><span class="b" aria-hidden="true">→</span><span>Vous êtes une PME B2B (20–100 personnes) en SaaS, services ou édition logicielle.</span></li>
+          <li><span class="b" aria-hidden="true">→</span><span>Vous voulez des leads qui signent et un pipeline attribué, pas des vues et des likes.</span></li>
+          <li><span class="b" aria-hidden="true">→</span><span>Vous cherchez un partenaire dans la durée, pas un coup marketing one-shot.</span></li>
+          <li><span class="b" aria-hidden="true">→</span><span>Vous voulez des dashboards clairs et des chiffres que vous pouvez présenter au COMEX.</span></li>
+        </ul>
+      </div>
+      <div class="fit-card no reveal">
+        <h3><span class="ic" aria-hidden="true">!</span>Pas pour vous si…</h3>
+        <ul class="fit-list">
+          <li><span class="b" aria-hidden="true">→</span><span>Vous cherchez de la « notoriété » sans vous soucier du retour sur investissement.</span></li>
+          <li><span class="b" aria-hidden="true">→</span><span>Vous voulez une campagne « one-shot » sans suivi ni itération.</span></li>
+          <li><span class="b" aria-hidden="true">→</span><span>Vous jugez la performance au nombre de vues plutôt qu'au nombre de RDV signés.</span></li>
+          <li><span class="b" aria-hidden="true">→</span><span>Vous n'avez ni l'envie ni la disponibilité d'aligner marketing et commercial.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sec-cta reveal">
+      <button class="btn btn-primary btn-lg" data-modal>Prendre RDV</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div class="wrap">
+    <div class="stats-grid">
+      <div class="stat reveal"><div class="num grad-text">40+</div><div class="lbl">Clients accompagnés</div></div>
+      <div class="stat reveal"><div class="num grad-text">3.2 M€</div><div class="lbl">CA généré pour nos clients</div></div>
+      <div class="stat reveal"><div class="num grad-text">12</div><div class="lbl">Secteurs couverts</div></div>
+      <div class="stat reveal"><div class="num grad-text">8</div><div class="lbl">Collaborateurs experts</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MÉTHODE ===== -->
+<section class="sec" id="methode">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">La méthode</p>
+      <h2>Quatre piliers. Une boucle qui s'améliore.</h2>
+      <p>Pas de recette magique : un système mesurable qui transforme la donnée en décisions, et les décisions en chiffre d'affaires.</p>
+    </div>
+    <div class="method-grid">
+      <div class="m-card reveal">
+        <span class="step">01</span>
+        <div class="m-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Analyser</h3>
+        <p>Audit acquisition, étude de marché opérationnelle, audit SEO &amp; GEO. On part de la donnée réelle, pas d'intuitions.</p>
+      </div>
+      <div class="m-card reveal">
+        <span class="step">02</span>
+        <div class="m-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg></div>
+        <h3>Construire</h3>
+        <p>Plan d'actions, sites qui convertissent, intégration CRM, automatisation marketing. Une infrastructure qui tient.</p>
+      </div>
+      <div class="m-card reveal">
+        <span class="step">03</span>
+        <div class="m-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 3 14 9-14 9z"/></svg></div>
+        <h3>Exécuter</h3>
+        <p>Campagnes multicanales, prospection commerciale, cold mailing, ads &amp; social. On déploie et on tient le rythme.</p>
+      </div>
+      <div class="m-card reveal">
+        <span class="step">04</span>
+        <div class="m-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7M21 4v4h-4"/></svg></div>
+        <h3>Apprendre</h3>
+        <p>Dashboards attribués, itérations hebdo, optimisation continue du coût par lead. La boucle qui compose les résultats.</p>
+      </div>
+    </div>
+    <div class="sec-cta reveal">
+      <button class="btn btn-primary btn-lg" data-modal>Prendre RDV</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PREUVES ===== -->
+<section class="sec" id="preuves">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Résultats clients</p>
+      <h2>Des chiffres attribués, pas des moyennes vides.</h2>
+      <p>Chaque résultat est rattaché à un client réel, un secteur, une taille d'entreprise. Projetez-vous.</p>
+    </div>
+    <div class="tg-grid">
+      <div class="tg-card reveal">
+        <div class="quote" aria-hidden="true">"</div>
+        <span class="tg-result" aria-hidden="true">▲ Coût par lead ÷ 2 en 3 mois</span>
+        <blockquote>« On a divisé par deux notre coût par lead en un trimestre. Pour la première fois, je présente au board des chiffres que je peux défendre. »</blockquote>
+        <div class="tg-meta">
+          <div class="name">Camille R.</div>
+          <div class="role">Directrice Générale</div>
+          <div class="ctx"><span>SaaS B2B</span><span>Paris</span><span>80 employés</span></div>
+        </div>
+      </div>
+      <div class="tg-card reveal">
+        <div class="quote" aria-hidden="true">"</div>
+        <span class="tg-result" aria-hidden="true">▲ +124% leads qualifiés / 90 j</span>
+        <blockquote>« +124% de leads qualifiés en 90 jours, et surtout un pipeline que mon équipe commerciale prend enfin au sérieux. Un vrai partenariat. »</blockquote>
+        <div class="tg-meta">
+          <div class="name">Thomas L.</div>
+          <div class="role">Responsable Marketing</div>
+          <div class="ctx"><span>Services B2B</span><span>Lyon</span><span>45 employés</span></div>
+        </div>
+      </div>
+      <div class="tg-card reveal">
+        <div class="quote" aria-hidden="true">"</div>
+        <span class="tg-result" aria-hidden="true">▲ −32% rebond · +18 RDV/mois</span>
+        <blockquote>« Refonte du site, automatisation CRM, prospection : −32% de rebond et 18 RDV qualifiés par mois. Le ROI était visible dès le 2ᵉ mois. »</blockquote>
+        <div class="tg-meta">
+          <div class="name">Sarah M.</div>
+          <div class="role">Co-fondatrice</div>
+          <div class="ctx"><span>Éditeur logiciel</span><span>Nantes</span><span>30 employés</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-cta reveal">
+      <button class="btn btn-primary btn-lg" data-modal>Prendre RDV</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPERTISES ===== -->
+<section class="sec" id="expertises">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Nos expertises</p>
+      <h2>Tout l'arsenal acquisition → conversion.</h2>
+      <p>Quatre domaines, un seul objectif : transformer l'attention en chiffre d'affaires.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal">
+        <div class="exp-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+        <div>
+          <h3>Acquisition</h3>
+          <p>Capter la bonne audience au bon moment, sur les bons canaux — et alimenter le pipeline en continu.</p>
+          <div class="exp-tags"><span>Campagnes Ads</span><span>Social Media</span><span>Cold Mailing</span><span>Prospection</span><span>SEO &amp; GEO</span></div>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <div>
+          <h3>Conversion</h3>
+          <p>Des sites et tunnels pensés pour la signature. On optimise chaque étape jusqu'au RDV pris.</p>
+          <div class="exp-tags"><span>Webdesign</span><span>Landing pages</span><span>Direction Artistique</span><span>Marketing de Contenu</span></div>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3M9 20h6M12 4v16"/><rect x="3" y="9" width="18" height="6" rx="2"/></svg></div>
+        <div>
+          <h3>Automatisation</h3>
+          <p>CRM intégré, séquences automatisées, relances et service client : zéro lead perdu en route.</p>
+          <div class="exp-tags"><span>Intégration CRM</span><span>Automatisation Marketing</span><span>Relance &amp; SAV</span><span>Multicanal</span></div>
+        </div>
+      </div>
+      <div class="exp-card reveal">
+        <div class="exp-ic" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10M12 2v10l7 3"/></svg></div>
+        <div>
+          <h3>IA &amp; Data</h3>
+          <p>Enrichissement de données, visibilité IA, scoring et attribution : des décisions guidées par la donnée.</p>
+          <div class="exp-tags"><span>Enrichissement</span><span>Data &amp; Scoring</span><span>Visibilité IA</span><span>Attribution</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="sec-cta reveal">
+      <button class="btn btn-primary btn-lg" data-modal>Prendre RDV</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA MILIEU ===== -->
+<section class="cta-mid">
+  <div class="wrap">
+    <div class="cta-box reveal">
+      <div class="halo" aria-hidden="true"></div>
+      <h2>Prêt à passer de la visibilité aux ventes ?</h2>
+      <p>Un diagnostic de 15 minutes, sans pitch commercial. On regarde vos chiffres, on identifie le levier prioritaire.</p>
+      <button class="btn btn-primary btn-lg" data-modal>Prendre RDV</button>
+      <p class="micro">Réponse sous 24h · Interventions France entière · Remote possible</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FORMATIONS ===== -->
+<section class="sec" id="formations" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Formations</p>
+      <h2>Montez vos équipes en compétence.</h2>
+      <p>Au-delà de l'exécution, on transmet. Des formats opérationnels, ancrés dans votre réalité B2B.</p>
+    </div>
+    <div class="form-grid">
+      <div class="form-card reveal">
+        <span class="tag">Marketing</span>
+        <h3>Formation Marketing</h3>
+        <p>Maîtrisez l'acquisition, le contenu et l'analyse de performance pour piloter votre croissance en interne.</p>
+      </div>
+      <div class="form-card reveal">
+        <span class="tag">IA · Rennes</span>
+        <h3>Formation IA</h3>
+        <p>Intégrez l'IA dans votre quotidien marketing &amp; commercial. Présentiel à Rennes, cas concrets et outils.</p>
+      </div>
+      <div class="form-card reveal">
+        <span class="tag">Direction</span>
+        <h3>Direction Marketing / Commerciale</h3>
+        <p>Structurez et alignez vos équipes marketing et commerciales pour un pipeline qui ne fuit plus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">
+          <span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path d="M30 70 L30 52 M50 70 L50 40 M70 70 L70 28" stroke="#8b5cf6" stroke-width="9" stroke-linecap="round"/></svg></span>
+          Size&nbsp;Up
+        </a>
+        <p>Agence de growth marketing B2B. On transforme votre visibilité en pipeline commercial mesurable.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Vous êtes</h4>
+        <ul>
+          <li><a href="#fit">Dirigeant PME</a></li>
+          <li><a href="#fit">Responsable marketing</a></li>
+          <li><a href="#preuves">SaaS &amp; éditeurs</a></li>
+          <li><a href="#preuves">Services B2B</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Nos expertises</h4>
+        <ul>
+          <li><a href="#expertises">Acquisition</a></li>
+          <li><a href="#expertises">Conversion</a></li>
+          <li><a href="#expertises">Automatisation</a></li>
+          <li><a href="#expertises">IA &amp; Data</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@size-up.io">hello@size-up.io</a></li>
+          <li><a href="tel:+33766475091">+33 7 66 47 50 91</a></li>
+          <li><a href="#" rel="noopener">@sizeup</a></li>
+          <li><a href="#methode">Analyser · Construire · Exécuter · Apprendre</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="notice">📍 Rennes · Interventions France entière · Remote possible</span>
+      <span class="copy">© 2026 Size Up. Tous droits réservés.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== STICKY MOBILE CTA ===== -->
+<div class="sticky-cta">
+  <button class="btn btn-primary" data-modal>Prendre RDV — diagnostic 15 min</button>
+</div>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="close" id="modalClose" aria-label="Fermer">✕</button>
+    <div id="modalForm">
+      <h3 id="modalTitle">Planifions votre diagnostic.</h3>
+      <p class="sub">15 minutes, sans pitch. On regarde vos chiffres et on identifie le levier prioritaire. Réponse sous 24h.</p>
+      <form id="contactForm" novalidate>
+        <div class="field">
+          <label for="f-name">Nom complet</label>
+          <input type="text" id="f-name" name="name" placeholder="Jean Dupont" required autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="f-email">Email professionnel</label>
+          <input type="email" id="f-email" name="email" placeholder="jean@entreprise.com" required autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="f-company">Nom de l'entreprise</label>
+          <input type="text" id="f-company" name="company" placeholder="Votre entreprise" required autocomplete="organization" />
+        </div>
+        <button type="submit" class="btn btn-primary">Je planifie mon entretien</button>
+        <p class="rgpd">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Vos données sont utilisées uniquement pour vous recontacter au sujet de votre demande. Aucune revente, aucun spam. Conforme RGPD.</span>
+        </p>
+      </form>
+    </div>
+    <div class="modal-success" id="modalSuccess" style="display:none">
+      <div class="ok" aria-hidden="true"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h3>C'est noté !</h3>
+      <p>On revient vers vous sous 24h pour caler votre diagnostic de 15 minutes. À très vite.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Nav scroll state
+  var nav = document.getElementById('nav');
+  var onScroll = function(){ nav.classList.toggle('scrolled', window.scrollY > 12); };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  // Hamburger
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); burger.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
+  });
+
+  // Modal
+  var modal = document.getElementById('modal');
+  var lastFocus = null;
+  function openModal(){
+    lastFocus = document.activeElement;
+    modal.classList.add('open');
+    document.body.style.overflow='hidden';
+    menu.classList.remove('open'); burger.classList.remove('open');
+    var inp = document.getElementById('f-name');
+    if(inp) setTimeout(function(){ inp.focus(); }, 60);
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('[data-modal]').forEach(function(b){ b.addEventListener('click', openModal); });
+  document.getElementById('modalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  // Form submit
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!this.checkValidity()){ this.reportValidity(); return; }
+    document.getElementById('modalForm').style.display='none';
+    document.getElementById('modalSuccess').style.display='block';
+  });
+
+  // Scroll reveal
+  var els = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    els.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
