@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DÉMO TEST — cuisiniste</title>
+<style>
+/* #region TOKENS */
+:root{--c:#f4efe6;--k:#0c0b1d;--j:#00a86b;--t:#c9553a;--o:#e0a030;--f:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{background:var(--c)}
+body{font-family:var(--f);color:var(--k);background:var(--c);overflow-x:hidden}
+@media (hover:hover) and (pointer:fine){body{cursor:none}}
+/* #endregion */
+/* #region NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;pointer-events:none;mix-blend-mode:difference;color:#fff}
+nav b{font-size:11px;letter-spacing:.25em;text-transform:uppercase}
+nav a{pointer-events:auto;font-size:9px;font-weight:700;text-transform:uppercase;border:1.5px solid #fff;border-radius:20px;padding:5px 12px;color:#fff;text-decoration:none}
+/* #endregion */
+/* #region HERO */
+.hero{height:100vh;position:relative;display:grid;place-items:center;overflow:hidden}
+.title{font-size:clamp(64px,19vw,300px);font-weight:900;letter-spacing:-.06em;line-height:.8;white-space:nowrap;position:relative;z-index:1}
+.tag{position:absolute;left:20px;bottom:24px;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;max-width:240px;line-height:1.5}
+.arrow{position:absolute;left:50%;bottom:18px;font-size:16px}
+#obj{position:absolute;z-index:2;width:min(28vw,340px);aspect-ratio:1;left:62%;top:50%;margin:-14vw 0 0 -10vw;pointer-events:none;will-change:transform}
+/* #endregion */
+/* #region OBJECTS */
+.steel{background:conic-gradient(from 20deg,#f3f3f6,#8a8fa0,#e9eaf0,#4a4e60,#dfe1ea,#8a8fa0,#f3f3f6);box-shadow:inset 0 0 0 6px #ffffff88,inset 0 0 40px #0006,0 30px 40px #0c0b1d33}
+.knob{border-radius:50%}
+.knob::after{content:"";position:absolute;inset:34%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#9aa0b3 60%,#3a3e50);box-shadow:0 4px 10px #0006}
+.hood{clip-path:polygon(22% 0,78% 0,78% 32%,100% 100%,0 100%,22% 32%)}
+.oven{border-radius:12%;background:linear-gradient(160deg,#dfe1ea,#7d8298 60%,#3a3e50);position:relative}
+.oven::before{content:"";position:absolute;left:12%;right:12%;top:30%;bottom:14%;border-radius:8%;background:linear-gradient(135deg,#0c0b1d,#2b2f4a 60%,#0c0b1d);box-shadow:inset 0 0 20px #000}
+.oven::after{content:"";position:absolute;left:18%;right:18%;top:14%;height:6%;border-radius:4px;background:#f3f3f6}
+/* #endregion */
+/* #region BAND (M2) */
+.band{height:34vh;background:var(--k);position:relative;overflow:hidden;display:grid;place-items:center}
+.band span{font-size:clamp(28px,7vw,110px);font-weight:900;letter-spacing:-.05em;color:var(--c);text-transform:uppercase;position:relative;text-shadow:3px 0 #ff2e63,-3px 0 #00e5ff;animation:glitch 2.4s steps(1) infinite}
+.band::before,.band::after{content:"";position:absolute;left:0;right:0;height:40px;background:var(--c)}
+.band::before{top:-22px;clip-path:polygon(0 60%,8% 30%,17% 70%,29% 20%,41% 65%,55% 25%,68% 70%,80% 30%,91% 65%,100% 35%,100% 0,0 0)}
+.band::after{bottom:-22px;clip-path:polygon(0 100%,100% 100%,100% 40%,90% 70%,78% 30%,64% 75%,50% 35%,38% 70%,25% 25%,12% 65%,0 30%)}
+@keyframes glitch{0%,90%,100%{transform:translate(0)}92%{transform:translate(-4px,1px)}96%{transform:translate(5px,-1px)}}
+/* #endregion */
+/* #region ABOUT (M3) */
+.about{padding:16vh 5vw 14vh}
+.about small{font-size:9px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;display:block;margin:0 0 5vh 2vw}
+.about p{font-size:clamp(22px,4.2vw,66px);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.94;max-width:86vw;text-indent:24vw}
+.w{display:inline-block;text-indent:0}
+/* #endregion */
+/* #region GRID (M4) */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5vw;padding:4vh 5vw 12vh}
+.cell{position:relative;aspect-ratio:1;display:grid;place-items:center;overflow:hidden}
+.cell i{position:absolute;left:50%;top:50%;width:10%;aspect-ratio:1;border-radius:50%;background:var(--x);transform:translate(-50%,-50%) scale(0);transition:transform .5s cubic-bezier(.2,.8,.2,1);border-radius:46% 54% 60% 40%/50% 40% 60% 50%}
+.cell:hover i{transform:translate(-50%,-50%) scale(11)}
+.cell .o{position:relative;width:50%;aspect-ratio:1;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.cell:hover .o{transform:scale(1.2) rotate(12deg)}
+.cell span{position:absolute;left:8px;bottom:6px;font-size:8px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;z-index:2}
+/* #endregion */
+/* #region FOOTER (M5) */
+footer{background:var(--k);color:var(--c);min-height:70vh;position:relative;display:grid;place-items:center;text-align:center;padding:12vh 5vw;overflow:hidden}
+footer::before{content:"";position:absolute;left:0;right:0;top:-1px;height:34px;background:var(--c);clip-path:polygon(0 0,100% 0,100% 30%,88% 75%,74% 35%,60% 80%,46% 40%,32% 78%,18% 38%,6% 70%,0 35%);animation:wave 4s ease-in-out infinite alternate}
+@keyframes wave{to{transform:translateX(-2%) scaleY(1.4)}}
+footer h2{font-size:clamp(44px,12vw,190px);font-weight:900;letter-spacing:-.05em;line-height:.85;position:relative;z-index:1;color:var(--j)}
+.cta{position:relative;z-index:3;display:inline-block;margin-top:5vh;background:var(--j);color:var(--k);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:13px;padding:16px 30px;border-radius:40px;text-decoration:none}
+footer p{position:relative;z-index:1;margin-top:3vh;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+#hand{position:absolute;z-index:2;width:min(16vw,170px);aspect-ratio:1;left:50%;top:14%;margin-left:-8vw}
+/* #endregion */
+/* #region INK */
+#ink{position:fixed;inset:0;z-index:15;pointer-events:none}
+#dot{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:#fff;z-index:30;pointer-events:none;mix-blend-mode:difference}
+@media (hover:none),(prefers-reduced-motion:reduce){#dot,#ink{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* #endregion */
+</style></head><body>
+<nav><b>Démo Test</b><a href="#contact">Réserver 10 min</a></nav>
+<section class="hero">
+ <div class="title" data-ink>DÉMO TEST</div>
+ <div id="obj" class="steel knob"></div>
+ <div class="tag">Cuisines sur mesure<br>Projet · Pose · Garantie</div><div class="arrow">↓</div>
+</section>
+<section class="band"><span>Cuisine en mouvement</span></section>
+<section class="about"><small>Qui nous sommes</small>
+ <p data-ink data-words>Démo Test est un cuisiniste fondé sur une culture du geste juste. Nous fondons pour des cuisines pensées avec soin, dessinées, posées et garanties.</p></section>
+<section class="grid" id="grid"></section>
+<footer id="contact"><h2 data-ink>Parlons-en</h2><div id="hand" class="steel knob"></div><div><a class="cta" href="#">Réserver 10 minutes</a><p>contact@demo-test.fr</p></div></footer>
+<canvas id="ink"></canvas><div id="dot"></div>
+<script>
+// #region GRID_BUILD
+const items=[['hood steel','Hotte · 2024','--x:#00a86b'],['oven','Four · 2025','--x:#c9553a'],['steel knob','Plaque · 2025','--x:#e0a030']];
+const g=document.getElementById('grid');
+items.forEach(([c,l,s])=>g.insertAdjacentHTML('beforeend',`<div class="cell" style="${s}"><i></i><div class="o ${c}"></div><span>${l}</span></div>`));
+// #endregion
+// #region INK
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches,FINE=matchMedia('(hover:hover) and (pointer:fine)').matches;
+const obj=document.getElementById('obj'),hand=document.getElementById('hand'),cv=document.getElementById('ink'),cx=cv.getContext('2d'),dot=document.getElementById('dot');
+document.querySelectorAll('[data-words]').forEach(el=>el.innerHTML=el.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' '));
+let mx=innerWidth*.5,my=innerHeight*.5,last=null;const pts=[];
+function fit(){cv.width=innerWidth;cv.height=innerHeight}fit();addEventListener('resize',fit);
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx-5}px,${my-5}px)`;
+ if(last){const d=Math.hypot(mx-last.x,my-last.y),n=Math.max(1,Math.ceil(d/5));for(let i=1;i<=n;i++)pts.push({x:last.x+(mx-last.x)*i/n,y:last.y+(my-last.y)*i/n,r:Math.min(44,16+d*.5),t:performance.now()})}
+ last={x:mx,y:my}});
+// gooey: ink is drawn on a scratch canvas then thresholded via blur+contrast on alpha
+const sc=document.createElement('canvas'),sx=sc.getContext('2d');
+function inkText(){
+ cx.globalCompositeOperation='source-atop';cx.fillStyle='#f4efe6';
+ document.querySelectorAll('[data-ink]').forEach(el=>{
+  const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;
+  while(n=w.nextNode()){const p=n.parentElement,ps=getComputedStyle(p),r=document.createRange();r.selectNodeContents(n);const b=r.getBoundingClientRect();
+   if(b.bottom<0||b.top>innerHeight||!n.textContent.trim())continue;
+   cx.font=`${ps.fontWeight} ${ps.fontSize} ${ps.fontFamily}`;cx.letterSpacing=ps.letterSpacing;
+   const t=/uppercase/.test(ps.textTransform)?n.textContent.toUpperCase():n.textContent;
+   cx.fillText(t.trim(),b.left,b.top+b.height*.5+parseFloat(ps.fontSize)*.33)}})}
+function loop(now){
+ sc.width=cv.width;sc.height=cv.height;
+ while(pts.length&&now-pts[0].t>1500)pts.shift();
+ sx.fillStyle='#000';for(const p of pts){const a=1-(now-p.t)/1500;sx.beginPath();sx.arc(p.x,p.y,p.r*a,0,7);sx.fill()}
+ cx.globalCompositeOperation='source-over';cx.clearRect(0,0,cv.width,cv.height);
+ cx.filter='blur(10px)';cx.drawImage(sc,0,0);cx.filter='none';
+ // threshold alpha -> gooey edge
+ const id=cx.getImageData(0,0,cv.width,cv.height),d=id.data;
+ for(let i=3;i<d.length;i+=4){const a=d[i];if(a>110){d[i]=255;d[i-3]=12;d[i-2]=11;d[i-1]=29}else d[i]=0}
+ cx.putImageData(id,0,0);
+ if(pts.length)inkText();
+ const dx=(mx-innerWidth/2)/innerWidth,dy=(my-innerHeight/2)/innerHeight;
+ obj.style.transform=`translate(${dx*70}px,${dy*40-scrollY*.25}px) rotate(${now/60%360}deg) rotateX(${-dy*40}deg) rotateY(${dx*40}deg)`;
+ hand.style.transform=`translateY(${Math.sin(now/600)*10}px) rotate(${now/90%360}deg)`;
+ requestAnimationFrame(loop)}
+if(!RM&&FINE)requestAnimationFrame(loop);
+else{obj.style.transform='none';obj.style.margin='0';obj.style.left='auto';obj.style.right='6vw';obj.style.top='30%'}
+// #endregion
+</script></body></html>
