@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buttermax — reference match</title>
+<style>
+/* #region tokens */
+:root{--y:#ffe600;--k:#0b0b0b;--f:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{background:var(--y)}
+body{font-family:var(--f);color:var(--k);background:var(--y);overflow-x:hidden;cursor:none}
+/* #endregion */
+/* #region nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;pointer-events:none}
+.logo{width:56px;height:18px;border:2px solid var(--k);border-radius:50%;margin:0 auto;position:absolute;left:50%;transform:translateX(-50%)}
+nav .pills{margin-left:auto;display:flex;gap:6px;pointer-events:auto}
+nav a{font-size:9px;font-weight:700;text-transform:uppercase;border:1.5px solid var(--k);border-radius:20px;padding:4px 12px;color:var(--k);text-decoration:none}
+/* #endregion */
+/* #region hero */
+.hero{height:100vh;position:relative;display:grid;place-items:center;overflow:hidden}
+.title{font-size:clamp(90px,24vw,360px);font-weight:900;letter-spacing:-.06em;line-height:.8;white-space:nowrap;position:relative;z-index:1}
+.title i{font-family:"Brush Script MT","Segoe Script",cursive;font-weight:400;letter-spacing:-.02em}
+.tag{position:absolute;left:20px;bottom:24px;font-size:8px;font-weight:700;text-transform:uppercase;max-width:220px}
+.arrow{position:absolute;left:50%;bottom:18px;font-size:16px}
+#obj{position:absolute;z-index:2;width:min(24vw,300px);aspect-ratio:1.15;left:50%;top:52%;margin:-13vw 0 0 -12vw;pointer-events:none;will-change:transform}
+/* #endregion */
+/* #region objects (faux 3D metal) */
+.metal{border-radius:14%;background:
+ linear-gradient(115deg,#fff 0,#9aa 18%,#eef 30%,#556 48%,#dde 62%,#789 80%,#fff 100%);
+ border:6px solid #c8a24a;box-shadow:inset 0 0 30px #0008,0 30px 40px #0004,inset 8px 8px 0 #fff8;transform-style:preserve-3d}
+.metal::after{content:"";position:absolute;inset:14%;border-radius:10%;background:conic-gradient(from 30deg,#f0f,#0ff,#ff0,#f0f);mix-blend-mode:overlay;opacity:.55;filter:blur(6px)}
+/* #endregion */
+/* #region about */
+.about{padding:14vh 5vw;position:relative;min-height:70vh;background:linear-gradient(#0b0b0b 0,#0b0b0b 12%,var(--y) 12%)}
+.about small{font-size:8px;font-weight:700;text-transform:uppercase;display:block;margin:0 0 6vh 2vw}
+.about p{font-size:clamp(22px,3.6vw,54px);font-weight:900;text-transform:uppercase;letter-spacing:-.04em;line-height:.92;max-width:78vw;text-indent:32vw}
+.w{display:inline-block;text-indent:0}
+/* #endregion */
+/* #region grid */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2vw;padding:8vh 5vw;position:relative}
+.cell{position:relative;aspect-ratio:1;display:grid;place-items:center;transition:background .25s}
+.cell .o{width:52%;aspect-ratio:1.1;transition:transform .35s cubic-bezier(.2,.8,.2,1);transform:rotate(var(--r,0deg))}
+.cell:hover{background:var(--c)}
+.cell:hover .o{transform:scale(1.35) rotate(calc(var(--r,0deg) + 14deg))}
+.cell span{position:absolute;left:6px;bottom:4px;font-size:7px;font-weight:700;text-transform:uppercase}
+.o.b{background:linear-gradient(135deg,#88f,#4af 40%,#215);border:5px solid #b98;border-radius:8%}
+.o.c{background:radial-gradient(circle at 35% 30%,#fff,#e93 35%,#631 80%);border-radius:50%/40%;border:5px solid #dbb}
+.o.d{background:linear-gradient(#333,#111);border:5px solid #a87;border-radius:20%}
+.o.e{background:conic-gradient(#ddd,#666,#eee,#555,#ddd);border-radius:50%}
+/* #endregion */
+/* #region footer */
+footer{background:var(--k);color:var(--y);height:60vh;position:relative;display:grid;place-items:center;overflow:hidden}
+footer h2{font-size:clamp(50px,11vw,170px);font-weight:900;letter-spacing:-.05em;position:relative;z-index:1}
+#hand{position:absolute;z-index:2;width:12vw;aspect-ratio:.7;background:linear-gradient(120deg,#eee,#a85 50%,#432);border-radius:40% 40% 20% 20%;left:47%;top:20%;transform:rotate(-8deg)}
+/* #endregion */
+/* #region ink */
+#ink{position:fixed;inset:0;z-index:15;pointer-events:none}
+#dot{position:fixed;width:10px;height:10px;border-radius:50%;background:var(--k);z-index:30;pointer-events:none;mix-blend-mode:difference;background:#fff}
+/* #endregion */
+</style></head><body>
+<nav><a>.</a><div class="logo"></div><div class="pills"><a>Work</a><a>Profile</a><a>Contact</a></div></nav>
+<section class="hero">
+ <div class="title" data-ink>Butter<i>max</i></div>
+ <div id="obj" class="metal"></div>
+ <div class="tag">The studio engineering the world's most iconic<br>digital production</div><div class="arrow">↓</div>
+</section>
+<section class="about"><small>Who we are</small>
+ <p data-ink>Buttermax is a digital studio founded on a culture of collaboration. We melt for lovingly crafted design, motion and technology.</p></section>
+<section class="grid" id="grid"></section>
+<footer><h2 data-ink style="color:var(--y)">Reach out</h2><div id="hand"></div></footer>
+<canvas id="ink"></canvas><div id="dot"></div>
+<script>
+// #region grid-build
+const cols=['#ff4d4d','#a9f','#9f9','#f80','#6af','#fd0','#f6c','#4dd'],cls=['b','c','d','e'];
+const g=document.getElementById('grid');
+for(let i=0;i<8;i++){g.insertAdjacentHTML('beforeend',`<div class="cell" style="--c:${cols[i]};--r:${(i*23%30)-15}deg"><div class="o ${cls[i%4]}"></div><span>Client ${i+1} ↗</span></div>`)}
+// #endregion
+// #region hero-object
+const obj=document.getElementById('obj');let mx=innerWidth/2,my=innerHeight/2;
+// #endregion
+// #region ink-trail
+const cv=document.getElementById('ink'),cx=cv.getContext('2d'),dot=document.getElementById('dot');
+function fit(){cv.width=innerWidth;cv.height=innerHeight}fit();addEventListener('resize',fit);
+// wrap words of [data-ink] so the ink layer can re-draw them inverted
+const words=[];document.querySelectorAll('[data-ink]').forEach(el=>{
+ if(!el.querySelector('i')&&el.tagName!=='H2'){el.innerHTML=el.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ')}
+ else{el.querySelectorAll('*').length||0}
+ });
+const pts=[];let last=null;
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx-5}px,${my-5}px)`;
+ if(last){const d=Math.hypot(mx-last.x,my-last.y),n=Math.ceil(d/6);for(let i=1;i<=n;i++)pts.push({x:last.x+(mx-last.x)*i/n,y:last.y+(my-last.y)*i/n,r:Math.min(46,14+d*.6),t:performance.now()})}
+ last={x:mx,y:my}});
+function inkText(){ // yellow copy of text, only where ink exists
+ cx.globalCompositeOperation='source-atop';cx.fillStyle='#ffe600';cx.textBaseline='alphabetic';
+ document.querySelectorAll('[data-ink]').forEach(el=>{
+  const cs=getComputedStyle(el),walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);let n;
+  while(n=walker.nextNode()){const p=n.parentElement,ps=getComputedStyle(p);
+   cx.font=`${ps.fontStyle} ${ps.fontWeight} ${ps.fontSize} ${ps.fontFamily}`;cx.letterSpacing=ps.letterSpacing;
+   const t=p.classList.contains('w')||el.tagName==='H2'||p.tagName==='I'||p===el?n.textContent:n.textContent;
+   const r=document.createRange();r.selectNodeContents(n);const rc=r.getBoundingClientRect();
+   if(rc.bottom<0||rc.top>innerHeight)continue;
+   const up=/uppercase/.test(ps.textTransform)?t.toUpperCase():t;
+   cx.fillText(up.trim()?up:'',rc.left,rc.top+(rc.height*.5)+parseFloat(ps.fontSize)*.34)}})}
+function loop(now){
+ cx.globalCompositeOperation='source-over';cx.clearRect(0,0,cv.width,cv.height);
+ while(pts.length&&now-pts[0].t>1400)pts.shift();
+ cx.fillStyle='#0b0b0b';
+ for(const p of pts){const a=1-(now-p.t)/1400;cx.beginPath();cx.arc(p.x,p.y,p.r*a,0,7);cx.fill()}
+ if(pts.length)inkText();
+ // hero object follows cursor with easing + spin
+ const dx=(mx-innerWidth/2)/innerWidth,dy=(my-innerHeight/2)/innerHeight,s=scrollY;
+ obj.style.transform=`translate(${dx*60}px,${dy*40-s*.3}px) rotateY(${dx*50+now/40%360}deg) rotateX(${-dy*30}deg) rotateZ(${dx*8}deg)`;
+ const h=document.getElementById('hand');h.style.transform=`rotate(${-8+dx*20}deg) translateY(${Math.sin(now/500)*8}px)`;
+ requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+// #endregion
+</script></body></html>
