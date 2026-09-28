@@ -17,7 +17,6 @@ nav a{pointer-events:auto;font-size:9px;font-weight:700;text-transform:uppercase
 /* #region HERO */
 .hero{height:100vh;position:relative;display:grid;place-items:center;overflow:hidden}
 .title{font-size:clamp(64px,19vw,300px);font-weight:900;letter-spacing:-.06em;line-height:.8;white-space:nowrap;position:relative;z-index:1}
-@media(max-width:600px){.title{font-size:14.5vw}}
 .tag{position:absolute;left:20px;bottom:24px;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;max-width:240px;line-height:1.5}
 .arrow{position:absolute;left:50%;bottom:18px;font-size:16px}
 #obj{position:absolute;z-index:2;width:min(28vw,340px);aspect-ratio:1;left:62%;top:50%;margin:-14vw 0 0 -10vw;pointer-events:none;will-change:transform}
@@ -47,9 +46,9 @@ nav a{pointer-events:auto;font-size:9px;font-weight:700;text-transform:uppercase
 /* #endregion */
 /* #region GRID (M4) */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5vw;padding:4vh 5vw 12vh}
-.cell{position:relative;aspect-ratio:1;display:grid;place-items:center}
+.cell{position:relative;aspect-ratio:1;display:grid;place-items:center;overflow:hidden}
 .cell i{position:absolute;left:50%;top:50%;width:10%;aspect-ratio:1;border-radius:50%;background:var(--x);transform:translate(-50%,-50%) scale(0);transition:transform .5s cubic-bezier(.2,.8,.2,1);border-radius:46% 54% 60% 40%/50% 40% 60% 50%}
-.cell:hover i{transform:translate(-50%,-50%) scale(7)}
+.cell:hover i{transform:translate(-50%,-50%) scale(11)}
 .cell .o{position:relative;width:50%;aspect-ratio:1;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
 .cell:hover .o{transform:scale(1.2) rotate(12deg)}
 .cell span{position:absolute;left:8px;bottom:6px;font-size:8px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;z-index:2}
@@ -95,7 +94,7 @@ document.querySelectorAll('[data-words]').forEach(el=>el.innerHTML=el.textConten
 let mx=innerWidth*.5,my=innerHeight*.5,last=null;const pts=[];
 function fit(){cv.width=innerWidth;cv.height=innerHeight}fit();addEventListener('resize',fit);
 addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY;dot.style.transform=`translate(${mx-5}px,${my-5}px)`;
- if(last){const d=Math.hypot(mx-last.x,my-last.y),n=Math.max(1,Math.ceil(d/5));for(let i=1;i<=n;i++)pts.push({x:last.x+(mx-last.x)*i/n,y:last.y+(my-last.y)*i/n,r:Math.min(90,30+d*.9),t:performance.now()})}
+ if(last){const d=Math.hypot(mx-last.x,my-last.y),n=Math.max(1,Math.ceil(d/5));for(let i=1;i<=n;i++)pts.push({x:last.x+(mx-last.x)*i/n,y:last.y+(my-last.y)*i/n,r:Math.min(44,16+d*.5),t:performance.now()})}
  last={x:mx,y:my}});
 // gooey: ink is drawn on a scratch canvas then thresholded via blur+contrast on alpha
 const sc=document.createElement('canvas'),sx=sc.getContext('2d');
@@ -110,10 +109,10 @@ function inkText(){
    cx.fillText(t.trim(),b.left,b.top+b.height*.5+parseFloat(ps.fontSize)*.33)}})}
 function loop(now){
  sc.width=cv.width;sc.height=cv.height;
- while(pts.length&&now-pts[0].t>2200)pts.shift();
- sx.fillStyle='#000';for(const p of pts){const a=1-(now-p.t)/2200;sx.beginPath();sx.arc(p.x,p.y,p.r*a,0,7);sx.fill()}
+ while(pts.length&&now-pts[0].t>1500)pts.shift();
+ sx.fillStyle='#000';for(const p of pts){const a=1-(now-p.t)/1500;sx.beginPath();sx.arc(p.x,p.y,p.r*a,0,7);sx.fill()}
  cx.globalCompositeOperation='source-over';cx.clearRect(0,0,cv.width,cv.height);
- cx.filter='blur(16px)';cx.drawImage(sc,0,0);cx.filter='none';
+ cx.filter='blur(10px)';cx.drawImage(sc,0,0);cx.filter='none';
  // threshold alpha -> gooey edge
  const id=cx.getImageData(0,0,cv.width,cv.height),d=id.data;
  for(let i=3;i<d.length;i+=4){const a=d[i];if(a>110){d[i]=255;d[i-3]=12;d[i-2]=11;d[i-1]=29}else d[i]=0}
